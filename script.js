@@ -33,10 +33,18 @@ const createGrid = function (size = 16) {
     }
     container.appendChild(row);
   }
+
+  // Set hover effect on grid
+  const allBox = document.querySelectorAll('.box');
+
+  allBox.forEach(el => {
+    el.addEventListener(
+      'mousemove',
+      () => (el.style.backgroundColor = 'black')
+    );
+  });
 };
 createGrid(); // First play
-
-const allBox = document.querySelectorAll('.box');
 
 // Return grid Size value
 const calcSize = function (e, num = e.target.value) {
@@ -55,11 +63,6 @@ const submitInput = function (e) {
   }
 };
 submitBtn.addEventListener('click', submitInput);
-
-// Set hover effect on grid
-allBox.forEach(el => {
-  el.addEventListener('mousemove', () => (el.style.backgroundColor = 'black'));
-});
 
 // Reset grid without animation effect
 const resetGrid = function (e) {
