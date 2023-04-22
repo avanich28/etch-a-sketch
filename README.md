@@ -1,2 +1,3 @@
 # etch-a-sketch
-This project emphasizes to use DOM manipulation to build a Etch-A-Sketch project.
+
+This project emphasizes to use DOM manipulation to build an Etch-A-Sketch.

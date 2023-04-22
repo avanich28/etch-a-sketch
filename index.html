@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Etch-A-Sketch</h1>
+    <form>
+      <label>Fill a Grid Size: </label>
+      <input
+        class="size"
+        type="number"
+        value=""
+        min="1"
+        max="100"
+        placeholder="16"
+        title="Set grid size here!"
+      />
+      <input class="submit" type="submit" value="SUBMIT" />
+      <button class="reset">RESET</button>
+    </form>
+    <div class="container"></div>
+    <div class="message">Have fun :)</div>
+  </body>
+</html>
