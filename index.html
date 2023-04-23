@@ -11,21 +11,41 @@
   </head>
   <body>
     <h1>Etch-A-Sketch</h1>
+
     <form>
-      <label>Fill a Grid Size: </label>
-      <input
-        class="size"
-        type="number"
-        value=""
-        min="1"
-        max="100"
-        placeholder="16"
-        title="Set grid size here!"
-      />
-      <input class="submit" type="submit" value="SUBMIT" />
-      <button class="reset">RESET</button>
+      <div>
+        <label>Fill a Grid Size: </label>
+        <input
+          class="size"
+          type="number"
+          value=""
+          min="1"
+          max="100"
+          placeholder="16"
+          title="Set grid size here!"
+        />
+        <input class="submit" type="submit" value="SUBMIT" />
+        <button class="reset">RESET</button>
+      </div>
+      <div class="color">
+        <label for="color-mode">Mode: </label>
+        <select name="color-mode" id="color-mode">
+          <option value="single">Single Color</option>
+          <option value="rainbow">Rainbow</option>
+        </select>
+
+        <label class="colorPicker" for="colorpicker">Color Picker: </label>
+        <input type="color" id="colorPicker" value="" />
+      </div>
     </form>
+
     <div class="container"></div>
     <div class="message">Have fun :)</div>
+
+    <!-- Add Sound -->
+    <audio
+      class="typewriter"
+      src="sounds/mixkit-typewriter-soft-hit-1366.wav"
+    ></audio>
   </body>
 </html>
