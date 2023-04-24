@@ -8,6 +8,8 @@
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <!-- link for erase 'favicon not found' error -->
+    <link rel="shortcut icon" href="#" />
   </head>
   <body>
     <h1>Etch-A-Sketch</h1>
@@ -20,22 +22,29 @@
           type="number"
           value=""
           min="1"
-          max="100"
+          max="96"
           placeholder="16"
           title="Set grid size here!"
         />
         <input class="submit" type="submit" value="SUBMIT" />
-        <button class="reset">RESET</button>
+        <button class="reset">CLEAR</button>
       </div>
       <div class="color">
-        <label for="color-mode">Mode: </label>
+        <label for="color-mode">Color Mode: </label>
         <select name="color-mode" id="color-mode">
           <option value="single">Single Color</option>
           <option value="rainbow">Rainbow</option>
+          <option value="erase">Erase</option>
         </select>
 
         <label class="colorPicker" for="colorpicker">Color Picker: </label>
         <input type="color" id="colorPicker" value="" />
+      </div>
+
+      <div class="draw-method">
+        <label>Draw type: </label>
+        <label><input type="radio" name="choice" value="hover" />Hover</label>
+        <label><input type="radio" name="choice" value="press" />Press</label>
       </div>
     </form>
 
@@ -43,9 +52,7 @@
     <div class="message">Have fun :)</div>
 
     <!-- Add Sound -->
-    <audio
-      class="typewriter"
-      src="sounds/mixkit-typewriter-soft-hit-1366.wav"
-    ></audio>
+    <audio id="typewriter" src="sounds/typewriter.wav"></audio>
+    <audio id="click" src="sounds/click.wav"></audio>
   </body>
 </html>
