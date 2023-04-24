@@ -46,7 +46,7 @@ const selectMode = function (mode, drawType) {
     } else if (mode === 'rainbow') {
       e.target.style.backgroundColor = randomRgb();
     } else if (mode === 'erase') {
-      e.target.style.backgroundColor = 'rgb(233, 239, 243)'
+      e.target.style.backgroundColor = 'rgb(233, 239, 243)';
     }
   };
 
@@ -153,7 +153,9 @@ resetBtn.addEventListener('click', resetGrid);
 modes.addEventListener('change', e => {
   const modeColor = e.target.value;
   userSelectMode = modeColor;
+
   selectMode(modeColor, userDrawType);
+
   clickAudio.play();
 });
 
@@ -162,8 +164,9 @@ drawChoice.forEach(el => {
   el.addEventListener('change', e => {
     const modeDraw = e.target.value;
     userDrawType = modeDraw;
-    // console.log(userDrawType);
+
     createGrid(latestUserSizeNum, userSelectMode, modeDraw);
+
     clickAudio.play();
   });
 });
