@@ -135,6 +135,7 @@ const submitInput = function (e) {
       calcSize(e, fillSize.value);
     }
     fillSize.value = '';
+    typewriterAudio.currentTime = 0;
     typewriterAudio.play();
   }
 };
@@ -145,6 +146,8 @@ const resetGrid = function (e) {
   e.preventDefault();
   createGrid();
   fillSize.value = '';
+
+  typewriterAudio.currentTime = 0;
   typewriterAudio.play();
 };
 resetBtn.addEventListener('click', resetGrid);
@@ -156,6 +159,7 @@ modes.addEventListener('change', e => {
 
   selectMode(modeColor, userDrawType);
 
+  clickAudio.currentTime = 0;
   clickAudio.play();
 });
 
@@ -167,6 +171,7 @@ drawChoice.forEach(el => {
 
     createGrid(latestUserSizeNum, userSelectMode, modeDraw);
 
+    clickAudio.currentTime = 0;
     clickAudio.play();
   });
 });

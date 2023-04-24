@@ -5,11 +5,13 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Sono', sans-serif;
+  text-align: center;
 }
 
 h1 {
-  padding: 0;
-  margin-top: 50px;
+  display: inline-block;
+  margin: 0;
+  padding-top: 50px;
   text-align: center;
   font-family: 'Slackey', cursive;
   font-size: 40px;
@@ -28,7 +30,7 @@ h1 {
     transform: translateY(0px) scale(1.1, 0.9);
   }
   30% {
-    transform: translateY(-50px) scale(0.9, 1.1);
+    transform: translateY(-25px) scale(0.9, 1.1);
   }
   50% {
     transform: translateY(0) scale(1, 1);
@@ -45,8 +47,7 @@ h1 {
 }
 
 form {
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 20px;
   font-size: 14px;
 }
 
@@ -148,7 +149,6 @@ input[type='color'] {
 
 .message {
   font-size: 18px;
-  text-align: center;
   /* animation */
   margin: 15px auto;
   width: 123px;
